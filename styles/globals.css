@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #F56F54;
+  font-family: 'Noto Serif Georgian', serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -13,4 +16,105 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-radius: 0;
+  border: none;
+}
+
+@font-face {
+  font-family: "Noto Serif Georgian, Thin";
+  src: url("../public/fonts/NotoSerifGeorgian-Thin.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Noto Serif Georgian, Regular";
+  src: url("../public/fonts/NotoSerifGeorgian-Regular.ttf") format("ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Noto Serif Georgian, Black";
+  src: url("../public/fonts/NotoSerifGeorgian-Black.ttf") format("ttf");
+  font-weight: 400;
+}
+
+/* body {
+  font-family: 'Courier GEO';
+} */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9387c0;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7e63e0; 
+}
+
+.dashed-border {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='white' stroke-width='3' stroke-dasharray='10%2c 17%2c 21%2c 22' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 10px;
+}
+
+.table {
+  background-image: url('../shared/images/table.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: url("../shared/images/cursor.cur"), default;
+}
+
+@media only screen and (min-width: 800px) {
+  .main-page-table::before {
+    content: "";
+    background-image: url('../shared/images/crayon-pencil.svg');
+    position: absolute;
+    width: 188px;
+    height: 168px;
+    bottom: 50px;
+    left: 100px;
+    z-index: 2;
+  }
+  
+  .main-page-table::after {
+    content: "";
+    background-image: url('../shared/images/paper.svg');
+    position: absolute;
+    width: 151px;
+    height: 211px;
+    top: -75px;
+    right: 130px;
+    z-index: 2;
+  }
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .navigation-active {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    touch-action: none;
+  }
+  .backdrop-filter {
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+  }
 }
